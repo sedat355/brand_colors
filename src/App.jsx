@@ -1,7 +1,10 @@
+import Sidebar from './components/Sidebar'
+
+
 const App = () => {
   return(
     <div>
-      <h1 className="underline">hello</h1>
+      <Sidebar/>
     </div>
   )
 }
