@@ -51,4 +51,6 @@ body {
 }
 .menu ul li a {
   display: block;
+  font-weight: 600;
+  color: #333;
 }
