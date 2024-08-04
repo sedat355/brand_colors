@@ -1,11 +1,12 @@
-import Sidebar from './components/Sidebar'
-
+import Content from "./components/Content"
+import Sidebar from "./components/Sidebar"
 
 const App = () => {
-  return(
-    <div>
-      <Sidebar/>
-    </div>
+  return (
+    <>
+      <Sidebar />
+      <Content />
+    </>
   )
 }
 
