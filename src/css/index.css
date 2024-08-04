@@ -26,13 +26,14 @@ html, body {
   height: 100%;
 }
 body {
-  
+  overflow: hidden; 
 }
 #root {
   height: 100%;
   display: flex;
 }
 
+/*! SIDEBAR STİLLERİ ----------------------------------------*/
 .sidebar {
   width: 320px;
   min-width: 320px;
@@ -71,6 +72,8 @@ body {
 .menu ul li a:hover {
   color: #0099e5;
 }
+
+/*! MODAL STİLLERİ -----------------------------------------*/
 .about-modal {
   max-width: 720px;
   background-color: #fff;
@@ -113,10 +116,18 @@ body {
   justify-content: center;
   background: rgba(#fff, .5);
 }
+
+/*! CONTENT STİLLERİ --------------------------------------*/
 .content {
   flex: 1;
+  overflow: auto;
+}
+.brands {
+  padding: 25px;
 }
 .content-header {
+  position: sticky;
+  top: 0;
   height: 60px;
   border-bottom: 1px solid #ccc;
   display: flex;
