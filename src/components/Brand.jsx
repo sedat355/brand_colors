@@ -1,6 +1,7 @@
 import {useContext} from "react"
 import { getContrastYIQ } from "../helpers"
 import MainContext from "./MainContext"
+import ClipboardButton from 'react-clipboard.js';
 
 function Brand({brand}) {
   const { selectedBrands, setSelectedBrands } = useContext(MainContext)
@@ -19,10 +20,15 @@ function Brand({brand}) {
 
       <div className="brand-colors">
         {brand.colors.map( (color, i) => 
-          <span 
+          <ClipboardButton
             style={{'--bgColor':`#${color}`, '--textColor':`${getContrastYIQ(color)}`}} 
-            key={i}
-          >{color}</span>)}
+            key={i}  
+            component="span"
+            data-clipboard-text={color}
+          >
+            {color}
+          </ClipboardButton>
+         )}
       </div>
     </div>
   )

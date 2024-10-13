@@ -154,6 +154,7 @@ body {
   color: white;
   color: var(--textColor);
   text-indent: -9999px;
+  cursor: pointer;
 }
 .brand.selected .brand-colors span {
   flex: 1;
