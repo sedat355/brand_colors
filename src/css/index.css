@@ -140,8 +140,8 @@ body {
 }
 .brand-colors span {
   background-color: var(--bgColor);
-  flex:1;
   height: 40px;
+  width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,6 +149,7 @@ body {
   font-weight: 500;
   color: white;
   color: var(--textColor);
+  text-indent: -9999px;
 }
 .content-header {
   position: sticky;

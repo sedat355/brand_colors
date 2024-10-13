@@ -1,16 +1,11 @@
 import Search from "./Search"
-import BrandsData from "../brands.json"
 import Brand from "./Brand"
-import {useState} from "react"
- 
-let brandsArray = []
-Object.keys(BrandsData).map( key => {
-  brandsArray.push(BrandsData[key])
-})
+import MainContext from "./MainContext"
+import {useContext} from "react"
 
 function Content() {
-  const [brands, setBrands] = useState(brandsArray)
-
+  const {brands} = useContext(MainContext);
+  
   return(
     <main className="content">
       <header className="content-header">
