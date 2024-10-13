@@ -148,6 +148,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: white;
+  color: var(--textColor);
 }
 .content-header {
   position: sticky;

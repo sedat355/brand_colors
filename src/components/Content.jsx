@@ -2,7 +2,7 @@ import Search from "./Search"
 import BrandsData from "../brands.json"
 import Brand from "./Brand"
 import {useState} from "react"
-
+ 
 let brandsArray = []
 Object.keys(BrandsData).map( key => {
   brandsArray.push(BrandsData[key])
