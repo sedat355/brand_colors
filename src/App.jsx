@@ -11,9 +11,12 @@ Object.keys(BrandsData).map( key => {
 
 const App = () => {
   const [brands, setBrands] = useState(brandsArray)
+  const [selectedBrands, setSelectedBrands] = useState([])
 
   const data = {
     brands,
+    selectedBrands,
+    setSelectedBrands,
   }
 
   return (

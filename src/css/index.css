@@ -131,9 +131,13 @@ body {
   padding: 15px;
   margin-bottom: 10px;
 }
+.brand.selected {
+  border-color: red;
+}
 .brand h5 {
   font-size: 18px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .brand-colors {
   display: flex;
@@ -150,6 +154,10 @@ body {
   color: white;
   color: var(--textColor);
   text-indent: -9999px;
+}
+.brand.selected .brand-colors span {
+  flex: 1;
+  text-indent: 0;
 }
 .content-header {
   position: sticky;
