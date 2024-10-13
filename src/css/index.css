@@ -138,6 +138,17 @@ body {
 .brand-colors {
   display: flex;
 }
+.brand-colors span {
+  background-color: var(--bgColor);
+  flex:1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
 .content-header {
   position: sticky;
   top: 0;

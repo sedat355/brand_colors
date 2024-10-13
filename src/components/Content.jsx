@@ -1,13 +1,15 @@
 import Search from "./Search"
 import BrandsData from "../brands.json"
 import Brand from "./Brand"
+import {useState} from "react"
+
+let brandsArray = []
+Object.keys(BrandsData).map( key => {
+  brandsArray.push(BrandsData[key])
+})
 
 function Content() {
-
-  let brandsArray = []
-  Object.keys(BrandsData).map( key => {
-    brandsArray.push(BrandsData[key])
-  })
+  const [brands, setBrands] = useState(brandsArray)
 
   return(
     <main className="content">
@@ -16,7 +18,7 @@ function Content() {
       </header>
 
       <section className="brands">
-        {brandsArray.map( (brand, index) => <Brand key={index} brand={brand}/>)}
+        {brands.map( (brand, index) => <Brand key={index} brand={brand}/>)}
       </section>
     </main>
   )
