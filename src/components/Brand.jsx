@@ -13,7 +13,7 @@ function Brand({brand}) {
       setSelectedBrands([...selectedBrands, brand.slug])
     }
   }
-
+  
   return(
     <div className={`brand ${selectedBrands.includes(brand.slug) ? 'selected' : ''}`}>
       <h5 onClick={toggleSelected}>{brand.title}</h5>
@@ -23,13 +23,13 @@ function Brand({brand}) {
           <ClipboardButton
             style={{'--bgColor':`#${color}`, '--textColor':`${getContrastYIQ(color)}`}} 
             key={i}  
-            component="span"
+            component="span" 
             data-clipboard-text={color}
           >
             {color}
           </ClipboardButton>
          )}
-      </div>
+      </div> 
     </div>
   )
 }

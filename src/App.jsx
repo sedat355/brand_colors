@@ -13,6 +13,8 @@ const App = () => {
   const [brands, setBrands] = useState(brandsArray)
   const [selectedBrands, setSelectedBrands] = useState([])
 
+  console.log(selectedBrands)
+
   const data = {
     brands,
     selectedBrands,
