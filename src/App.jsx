@@ -6,27 +6,17 @@ import {useState} from "react"
 import Copied from "./components/Copied"
 import {useEffect} from "react"
 
-let brandsArray = []
-Object.keys(BrandsData).map( key => {
-  brandsArray.push(BrandsData[key])
-})
-
 const App = () => {
+  const brandsArray = []
+  Object.keys(BrandsData).map(key => {
+    brandsArray.push(BrandsData[key])
+  })
+
   const [brands, setBrands] = useState(brandsArray)
   const [selectedBrands, setSelectedBrands] = useState([])
   const [copied, setCopied] = useState(false)
-
-  console.log(selectedBrands)
-
-  const data = {
-    brands,
-    selectedBrands,
-    setSelectedBrands,
-    setCopied,
-  }
-
-  console.log(copied)
-
+  const [searchTerm, setSearchTerm] = useState('')
+  
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setCopied(false)
@@ -34,6 +24,18 @@ const App = () => {
     
     return () => clearTimeout(timeoutId)
   }, [copied]);
+
+  useEffect(() => {
+      setBrands(brandsArray.filter(brand => brand.title.toLowerCase().includes(searchTerm.toLowerCase())))
+  }, [searchTerm]);
+
+  const data = {
+    brands,
+    selectedBrands,
+    setSelectedBrands,
+    setCopied,
+    setSearchTerm,
+  }
 
   return (
     <>
