@@ -8,6 +8,8 @@ const Download = () => {
   return(
     <div className="download">
       <div className="actions">
+        <a><GrDownload/></a>
+        <button><GrLink/></button>
 
       </div>
       <div className="selected" onClick={	() => setSelectedBrands([])}>
