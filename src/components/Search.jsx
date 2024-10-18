@@ -12,7 +12,8 @@ function Search() {
       </div>
       <input
         onChange={(e) => setSearchTerm(e.target.value)} 
-        placeholder="Search brands.." />
+        placeholder="Search brands.." 
+      />
     </div>
   )
 }
