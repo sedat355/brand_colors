@@ -241,6 +241,19 @@ body {
   width: 25px;
   height: 25px;
 }
+.back-btn {
+  background-color: transparent;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  /* margin-left: 10px; */
+  color: #999;
+  padding: 10px;
+}
+.back-btn svg {
+  display: block;
+  margin-right: 10px;
+}
 .copied {
   background-color: rgba(0,0,0,1);
   height: 50px;
